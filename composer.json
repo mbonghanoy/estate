@@ -1,0 +1,31 @@
+{
+    "name": "mbonghanoy/estate",
+    "description": "Asset Management System",
+    "type": "Project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "mbonghanoy",
+            "email": "bonghanoymark@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Estate\\": "app/"
+        },
+        "files": [
+            "app/helpers.php"
+        ]
+    },
+    "repositories": [
+        {
+            "url": "https://github.com/mbonghanoy/vivid.git",
+            "type": "git"
+        }
+    ],
+    "require": {
+        "mjohn/vivid" : "dev-master",
+        "symfony/var-dumper": "^3.3",
+        "vlucas/phpdotenv": "^2.4"
+    }
+}
