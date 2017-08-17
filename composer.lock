@@ -13,7 +13,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mbonghanoy/vivid.git",
-                "reference": "f146718ae84f4ff7670e8d98ed581325cc7f4a78"
+                "reference": "e5198f500b0f13766520f26dd74bb6bd262e9679"
             },
             "require": {
                 "vlucas/phpdotenv": "^2.4"
@@ -30,20 +30,20 @@
                     "email": "bonghanoymark@gmail.com"
                 }
             ],
-            "time": "2017-08-16 07:06:22"
+            "time": "2017-08-17 03:49:35"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.4.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "f29dca382a6485c3cbe6379f0c61230167681937"
+                "reference": "7c8fae0ac1d216eb54349e6a8baa57d515fe8803"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/f29dca382a6485c3cbe6379f0c61230167681937",
-                "reference": "f29dca382a6485c3cbe6379f0c61230167681937",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/7c8fae0ac1d216eb54349e6a8baa57d515fe8803",
+                "reference": "7c8fae0ac1d216eb54349e6a8baa57d515fe8803",
                 "shasum": ""
             },
             "require": {
@@ -55,7 +55,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.4-dev"
+                    "dev-master": "1.5-dev"
                 }
             },
             "autoload": {
@@ -89,7 +89,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2017-06-09 14:24:12"
+            "time": "2017-06-14 15:44:48"
         },
         {
             "name": "symfony/var-dumper",

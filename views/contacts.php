@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Employee</title>
 </head>
 <body>
+    <h1>Employee</h1>
    <table>
        <tr>
            <td>First Name</td>

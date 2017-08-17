@@ -27,7 +27,8 @@ class Router
         return $this->routes;
     }
 
-    public function post($u, Callable $call){
+    public function post($u, Callable $call)
+    {
         $new = new Contact;
         if($call($new)){
         }

@@ -2,10 +2,18 @@
 
 namespace Estate\Controllers;
 
+use Estate\Models\Contact;
+
 class LoginController
 {
-    public function showLogin()
+    public function get()
     {
-        vdump('login');
+        return view('login', [
+            'contacts' => $contacts
+        ]);
+
+        if(isset($_POST['login'])){
+            vdump('hey');
+        }
     }
 }

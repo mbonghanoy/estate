@@ -15,8 +15,8 @@ class SignupController
         ]);
     }
 
-    public function insert()
+    public function getter()
     {
-        return true;
+        echo 'wawawaw';
     }
 }
