@@ -17,6 +17,17 @@ class SignupController
 
     public function getter()
     {
-        echo 'wawawaw';
+        if(isset($_POST['insert'])){
+            $insert = new Contact;
+            $data = [
+                'first_name' => $_POST['first_name'],
+                'last_name' => $_POST['last_name']
+            ];
+            $insertion = $insert
+                ->insert($data);
+            if($insertion){
+                echo 'success';
+            }
+        }
     }
 }

@@ -27,11 +27,14 @@ class Router
         return $this->routes;
     }
 
-    public function post($u, Callable $call)
+     public function post($controller)
     {
-        $new = new Contact;
-        if($call($new)){
-        }
+        list($controller, $method) = explode('::', $controller);
+
+        $controller = "\Estate\Controllers\\$controller";
+        $controller = new $controller;
+
+        return $controller->$method();
     }
 
     public function fire()

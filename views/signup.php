@@ -20,7 +20,7 @@
                 <td><input type="text" name="middle_name"></td>
             </tr>
             <tr>
-                <td><input type="submit" name="signup" value="insert"></td>
+                <td><input type="submit" name="insert" value="insert"></td>
             </tr>
         </table>
     </form>
