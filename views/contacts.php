@@ -5,13 +5,18 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>My website brah</h1>
-
-    <ul>
-        <?php foreach($contacts as $contact): ?>
-        <li><?php echo $contact->first_name ?></li>
-        <?php endforeach; ?>
-    </ul>
+   <table>
+       <tr>
+           <td>First Name</td>
+           <td>Last Name</td>
+       </tr>
+       <?php foreach($contacts as $contact): ?>
+       <tr>
+           <td><?php echo $contact->first_name ?></td>
+           <td><?php echo $contact->last_name ?></td>
+       </tr>
+       <?php endforeach; ?>
+   </table>
 
 </body>
 </html>

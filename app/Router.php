@@ -2,6 +2,8 @@
 
 namespace Estate;
 
+use Estate\Models\Contact;
+
 class Router
 {
     protected $uri;
@@ -23,6 +25,12 @@ class Router
     public function getRoutes()
     {
         return $this->routes;
+    }
+
+    public function post($u, Callable $call){
+        $new = new Contact;
+        if($call($new)){
+        }
     }
 
     public function fire()
