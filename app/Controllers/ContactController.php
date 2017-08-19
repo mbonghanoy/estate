@@ -11,6 +11,7 @@ class ContactController
         $contact = new Contact;
 
         $contacts = $contact
+            ->table('asset')
             ->all();
 
         return view('contacts', [

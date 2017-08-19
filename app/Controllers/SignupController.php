@@ -10,24 +10,30 @@ class SignupController
 
     public function signup()
     {
-        return view('signup', [
-            'contacts' => $contacts
-        ]);
+        if(isset($_SESSION['id'])){
+            return view('signup', [
+                'contacts' => $contacts
+            ]);
+        }else {
+            header('Location: login');
+        }
     }
 
-    public function getter()
+    public function insertion()
     {
         if(isset($_POST['insert'])){
             $insert = new Contact;
             $data = [
-                'first_name' => $_POST['first_name'],
-                'last_name' => $_POST['last_name']
+                'description' => $_POST['description'],
+                'asset_serial' => $_POST['asset_serial'],
+                'brand' => $_POST['brand'],
+                'asset_tag_id' => $_POST['asset_tag_id'],
+                'purchase_date' => $_POST['purchase_date'],
+                'model' => $_POST['model'],
+                'cost' => $_POST['cost']
             ];
-            $insertion = $insert
+            $insert->table('asset')
                 ->insert($data);
-            if($insertion){
-                echo 'success';
-            }
         }
     }
 }

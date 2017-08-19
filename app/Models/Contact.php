@@ -6,5 +6,5 @@ use Vivid\Vivid;
 
 class Contact extends Vivid
 {
-    protected $table = 'employee';
+    protected $table;
 }

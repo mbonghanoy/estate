@@ -1,0 +1,42 @@
+body{
+    width: 100%;
+    margin: 0 auto;
+}
+
+header{
+    padding: 1%;
+    width: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.left-container{
+    width: 25%;
+    height: 100px;
+    float: left;
+    overflow: hidden;
+}
+
+.right-container{
+    width: 75%;
+    height: 100px;
+    float: right;
+}
+
+.asset-table{
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 70%;
+}
+
+.asset-table td{
+    border: 1px solid;
+    width: 50px;
+    text-align: center;
+}
