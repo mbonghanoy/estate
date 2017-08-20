@@ -18,6 +18,8 @@ class ItemController
             return view('items', [
                 'contacts' => $contacts
             ]);
+        }else{
+            header('Location: login');
         }
     }
 }

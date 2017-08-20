@@ -40,8 +40,9 @@
                 <td><?php echo $contact->asset_serial ?></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
+                <td class="asset-action">
+                    <a href="edit?id=<?php echo $contact->asset_id ?>">edit</a>
+                </td>
             </tr>
         </table>
         <?php endforeach; ?>
