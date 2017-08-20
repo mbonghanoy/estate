@@ -13,6 +13,7 @@ $router->get('items', 'ItemController::get');
 $router->get('logout', 'LogoutController::logout');
 $router->get('login', 'LoginController::login');
 $router->get('/', 'ItemController::get');
+$router->get("view?id={$_GET['id']}", 'ViewController::display');
 
 $router->post('SignupController::insertion');
 $router->post('LoginController::checkAccount');
