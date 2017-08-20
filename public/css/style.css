@@ -68,14 +68,12 @@ a{
 
 .asset-table-details{
     color: #666666;
-    font-weight: bold;
 }
 
 .asset-table-title{
     height: 30px;
     color: #9d662f;
     font-family: 'Roboto';
-    font-weight: bold;
 }
 
 .right-container{
@@ -88,7 +86,6 @@ tr {
 
 .asset-table a{
     text-decoration: none;
-    font-weight: 200;
 }
 
 .right-container h1{
@@ -105,14 +102,4 @@ tr {
     font-size: 18px;
     padding-left: 2px;
     color:  #404040;
-}
-
-.status{
-    font-weight: 100;
-}
-
-header{
-    width: 100%;
-    background-color: #273135;
-    height: 75px;
 }

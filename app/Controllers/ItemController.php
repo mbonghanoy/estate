@@ -13,8 +13,8 @@ class ItemController
 
             $contacts = $contact
                 ->table('asset')
-                ->all();
-
+                ->join('status','asset.status_id','status.status_id')
+                ->get();
             return view('items', [
                 'contacts' => $contacts
             ]);

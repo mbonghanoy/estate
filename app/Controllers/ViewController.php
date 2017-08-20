@@ -15,15 +15,19 @@ class ViewController
                 ->table('asset')
                 ->where('asset_id', $_GET['id'])
                 ->get();
+
             return view('view', [
                     'contacts' => $contacts
             ]);
+        }else{
+            header('Location: login');
         }
     }
 
     public function edit()
     {
-        $contact = new Contact;
+        if(isset($_SESSION['id'])){
+            $contact = new Contact;
 
             $contacts = $contact
                 ->table('asset')
@@ -32,6 +36,9 @@ class ViewController
             return view('edit', [
                     'contacts' => $contacts
             ]);
+        }else{
+            header('Location: login');
+        }
     }
 
     public function save()
@@ -49,7 +56,7 @@ class ViewController
                 'cost' => $_POST['cost']
             ];
 
-            $try = $update
+            $update
                 ->table('asset')
                 ->update($data, $_GET['id']);
             header('Location: items');

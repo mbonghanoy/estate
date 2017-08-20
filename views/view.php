@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css">
     <title>View asset</title>
 </head>
 <body>
@@ -42,6 +41,8 @@
             <tr>
                 <td class="asset-action">
                     <a href="edit?id=<?php echo $contact->asset_id ?>">edit</a>
+                    <a href="checkout?id=<?php echo $contact->asset_id ?>">checkout</a>
+                    <a href="checkin?id=<?php echo $contact->asset_id ?>">checkin</a>
                 </td>
             </tr>
         </table>
