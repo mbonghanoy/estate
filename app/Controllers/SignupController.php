@@ -32,8 +32,11 @@ class SignupController
                 'model' => $_POST['model'],
                 'cost' => $_POST['cost']
             ];
-            $insert->table('asset')
+            $insertion = $insert->table('asset')
                 ->insert($data);
+            if($insertion){
+                header('Location: items');
+            }
         }
     }
 }

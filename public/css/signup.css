@@ -1,0 +1,131 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+}
+body{
+    width: 100%;
+    margin: 0 auto;
+}
+
+header{
+    padding: 1%;
+    width: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.left-container{
+    width: 13%;
+    float: left;
+    border-right: 1px solid #C0C0C0;
+    height: 1000px;
+    font-family: 'Roboto';
+    position: fixed;
+}
+
+.side-nav{
+    margin-top: 50%;
+}
+
+.side-nav li{
+    width: 100%;
+    border-bottom: 1px solid #C0C0C0;
+    text-decoration: none;
+    padding : 5%;
+}
+
+.side-nav li a{
+    margin-left: 10%;
+    color: black;
+    font-size: 90%;
+}
+
+.right-container{
+    padding: 2%;
+    width: 87%;
+    float: right;
+}
+
+.right-container h1{
+    font-family: 'Roboto';
+    color:  #686868;
+    border-bottom: 2px solid #aa6868;
+    padding-left: 10px;
+    width: 70%;
+}
+
+.right-container h3{
+    margin-left: 20px;
+    color: #aa6868;
+}
+
+header{
+    width: 100%;
+    background-color: #273135;
+    height: 75px;
+}
+
+.sign-up-form{
+    font-family: 'Roboto';
+    margin-left: 30px;
+    text-align: left;
+}
+
+.sign-up-form div{
+    margin-bottom: 1%;
+}
+
+
+.sign-up-form input[type=text], .sign-up-form input[type="date"]{
+    width: 200px;
+    height: 30px;
+}
+
+.description input[type="text"]{
+    margin-left: 1.7%;
+    width: 50%;
+    height: 30px;
+}
+
+.purchase-date input[type="date"]{
+    margin-left: .5%;
+}
+
+.serial-number{
+    margin-left: 3.6%;
+}
+
+.brand{
+    margin-left: 5.4%;
+}
+
+.model{
+    margin-left: 5.1%;
+}
+.asset-tag-id{
+    margin-left: 1%;
+}
+
+.cost{
+    margin-left: 6%;
+}
+
+.submit-button{
+    float: left;
+    margin-left: 60%;
+    background-color: #0088cc;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.submit-button:hover{
+    color:black;
+}
