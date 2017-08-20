@@ -58,4 +58,15 @@ class CheckoutController
             ->update($data, $_GET['id']);
         header('Location: items');
     }
+
+    public function erase()
+    {
+        $erase = new Contact;
+
+        $erase
+            ->table('asset')
+            ->where('asset_id', $_GET['id'])
+            ->delete();
+        header('Location: items');
+    }
 }

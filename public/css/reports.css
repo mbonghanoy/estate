@@ -1,0 +1,148 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+}
+body{
+    width: 100%;
+    margin: 0 auto;
+}
+
+header{
+    padding: 1%;
+    width: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.left-container{
+    width: 13%;
+    float: left;
+    border-right: 1px solid #C0C0C0;
+    height: 1000px;
+    font-family: 'Roboto';
+    position: fixed;
+}
+
+.side-nav{
+    margin-top: 50%;
+}
+
+.side-nav li{
+    width: 100%;
+    border-bottom: 1px solid #C0C0C0;
+    text-decoration: none;
+    padding : 5%;
+}
+
+.side-nav li a{
+    margin-left: 10%;
+    color: black;
+    font-size: 90%;
+}
+
+.right-container{
+    padding: 2%;
+    width: 87%;
+    float: right;
+}
+
+.asset-table{
+    border: 1px solid #C0C0C0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.asset-table td{
+    border: 1px solid #C0C0C0;
+    width: 50px;
+    text-align: center;
+    font-size: 95%;
+}
+
+.asset-table-details{
+    color: #666666;
+    font-weight: bold;
+}
+
+.asset-table-title{
+    height: 30px;
+    color: #9d662f;
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+
+.right-container{
+    padding: 5%;
+}
+
+tr {
+    height: 70px;
+}
+
+.asset-table a{
+    text-decoration: none;
+    font-weight: 200;
+}
+
+.right-container h1{
+    font-family: 'Roboto';
+    color: #aa6868;
+    border-bottom: 2px solid #aa6868;
+    margin-left: 5px;
+}
+
+.asset-action a{
+    border-left: 3px solid #0086b3;
+    background-color: #C0C0C0;
+    padding: 5%;
+    font-size: 18px;
+    padding-left: 2px;
+    color:  #404040;
+}
+
+.status{
+    font-weight: 100;
+}
+
+header{
+    width: 100%;
+    background-color: #273135;
+    height: 75px;
+}
+
+.card{
+    float: left;
+    padding: 2%;
+    font-family: "Roboto";
+    background: #ad4747;
+    color: white;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    text-align: right;
+    height: 125px;
+    font-size: 15px;
+}
+
+.card.card-3{
+    width: 350px;
+    font-weight: lighter;
+}
+
+.card:first-child{
+    background-color: #379ADC;
+}
+
+.card2{
+    margin-left: 30px;
+}
+
+.card:last-child{
+    background-color: #F39C12;
+}

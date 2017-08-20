@@ -43,6 +43,7 @@
                     <a href="edit?id=<?php echo $contact->asset_id ?>">edit</a>
                     <a href="checkout?id=<?php echo $contact->asset_id ?>">checkout</a>
                     <a href="checkin?id=<?php echo $contact->asset_id ?>">checkin</a>
+                    <a href="delete?id=<?php echo $contact->asset_id ?>">delete asset</a>
                 </td>
             </tr>
         </table>
