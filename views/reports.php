@@ -61,8 +61,25 @@
                 <?php foreach($total as $sum): ?>
                 <p>&#8369;<?php echo $sum->total ?></p>
                 <?php endforeach; ?>
-                <p>Value of Assets</p>
+                <p>Total Cost of Assets</p>
             </div>
+        </div>
+        <div class="checkout-table">
+            <table>
+                <tr class="title">
+                    <td colspan="2">Checkout</td>
+                </tr>
+                <tr class="mini-title">
+                    <td>Name</td>
+                    <td>Item Description</td>
+                </tr>
+                <?php foreach($viewCheckedout as $viewCheckout): ?>
+                <tr>
+                    <td><?php echo $viewCheckout->first_name ?></td>
+                    <td><?php echo $viewCheckout->description ?></td>
+                </tr>
+                <?php endforeach; ?>
+            </table>
         </div>
     </div>
 </body>

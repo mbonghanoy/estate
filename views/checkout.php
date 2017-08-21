@@ -45,8 +45,8 @@
                 <select name="employees">
                     <?php foreach($employees as $employee): ?>
                     <option value="<?php echo $employee->employee_id ?>"><?php echo $employee->first_name?></option>
+                    <?php endforeach; ?>
                 </select>
-                <?php endforeach; ?>
                 <button type="submit" name="checkout">Checkout</button>
             </div>
             <?php foreach($contacts as $contact): ?>

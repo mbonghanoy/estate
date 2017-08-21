@@ -50,7 +50,7 @@ class CheckoutController
         $checkin = new Contact;
 
         $data = [
-            'employee_id' => '',
+            'employee_id' => NULL,
             'status_id' => 'Available'
         ];
         $checkin

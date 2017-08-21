@@ -200,6 +200,62 @@ header{
 
 .employees td{
     padding: 1%;
-    border: 1px solid black;
+    border: 1px solid #a6a6a6;
     width: 300px;
+    font-family: 'Roboto';
+}
+
+.employee-add a{
+    margin-left: 60%;
+    position: relative;
+    bottom: 60px;
+    color: #fff;
+    border: 0px;
+    padding: 5px 20px;
+    border-radius: 25px;
+    width: 30px;
+    background-color: #aa6868;
+}
+
+.employee-add a:hover{
+    background-color: #aa6868;
+    color: #fff;
+}
+
+.employee-heading td{
+    background-color: #aa6868;
+    color: white;
+}
+
+.employee-sign-up{
+    font-family: 'Roboto';
+    margin-left: 2%;
+    width: 50%;
+    height: 30px;
+}
+
+.employee-sign-up input[type="text"]{
+    width: 200px;
+    height: 30px;
+    opacity: .5;
+    margin-bottom: 1%;
+    margin-left: 2%;
+}
+
+.last-name input[type="text"], .first-name input[type="text"]{
+    margin-left: 3%;
+}
+
+input[type="text"]:hover{
+    border-color: black;
+}
+
+.employee-sign-up button{
+    border-radius: 20px;
+    border: 0px;
+    padding: 10px 15px;
+    background-color: #aa6868;
+    position: relative;
+    margin-left: 37%;
+    margin-top: 20px;
 }

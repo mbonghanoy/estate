@@ -40,16 +40,20 @@
     </div>
     <div class="right-container">
         <h1>Employees</h1>
-        <form action="" method="POST">
-            <table class="employees">
-                <?php foreach($employees as $employee): ?>
-                <tr>
-                    <td><?php echo "$employee->last_name, $employee->first_name" ?></td>
-                    <td><?php echo $employee->job_position?></td>
-                </tr>
-                <?php endforeach; ?>
-            </table>
-        </form>
+        <table class="employees">
+            <tr class="employee-heading">
+                <td colspan="2">Employees</td>
+            </tr>
+            <?php foreach($employees as $employee): ?>
+            <tr>
+                <td><?php echo "$employee->last_name, $employee->first_name" ?></td>
+                <td><?php echo $employee->job_position?></td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+        <div class="employee-add">
+            <a href="make">Add</a>
+        </div>
     </div>
 </body>
 </html>

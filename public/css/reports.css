@@ -84,10 +84,6 @@ nav a{
     padding: 5%;
 }
 
-tr {
-    height: 70px;
-}
-
 .asset-table a{
     text-decoration: none;
     font-weight: 200;
@@ -127,7 +123,7 @@ tr {
 }
 
 .card.card-3{
-    width: 300px;
+    width: 250px;
     font-weight: lighter;
 }
 
@@ -135,10 +131,26 @@ tr {
     background-color: #379ADC;
 }
 
-.card2{
-    margin-left: 30px;
+.card:nth-child(3){
+    background-color: #F39C12;
 }
 
-.card:last-child{
-    background-color: #F39C12;
+.checkout-table table{
+    width: 65.5%;
+    border-collapse: collapse;
+    font-family: 'Roboto';
+}
+
+.checkout-table td{
+    border: 1px solid #C0C0C0;
+    padding: 10px;
+}
+
+.title td{
+    background-color: #aa6868;
+    color: #fff;
+}
+
+.mini-title{
+    font-weight: bold;
 }

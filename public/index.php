@@ -22,10 +22,12 @@ $router->get("checkin?id={$_GET['id']}", 'CheckoutController::checkIn');
 $router->get("delete?id={$_GET['id']}", 'CheckoutController::erase');
 $router->get('reports', 'ReportController::get');
 $router->get('employee', 'EmployeeController::get');
+$router->get('make', 'EmployeeController::addNew');
 
 $router->post('SignupController::insertion');
 $router->post('LoginController::checkAccount');
 $router->post('ViewController::save');
 $router->post('CheckoutController::checkout');
+$router->post('EmployeeController::addEmployee');
 
 $router->fire();

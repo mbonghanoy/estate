@@ -11,6 +11,12 @@ class ReportController
         if(isset($_SESSION['id'])){
             $contact = new Contact;
             $totals = new Contact;
+            $viewCheckout = new Contact;
+
+            $viewCheckedout = $viewCheckout
+                ->table('asset')
+                ->join('employee', 'asset.employee_id', 'employee.employee_id')
+                ->get();
 
             $contacts = $contact
                 ->table('asset')
@@ -28,7 +34,8 @@ class ReportController
             return view('reports', [
                 'contacts' => $contacts,
                 'checkeout' => $checkeout,
-                'total' => $total
+                'total' => $total,
+                'viewCheckedout' => $viewCheckedout
             ]);
         }else{
             header('Location: login');
