@@ -119,3 +119,32 @@ header{
 .asset-action a:hover{
     background-color: #C0C0C0;
 }
+
+.parent{
+    text-align: center;
+    margin-top: 15%;
+    font-family: 'Roboto';
+}
+
+.parent input[type="text"]{
+    margin-bottom: 20px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.parent button{
+    border-radius: 10px;
+    border: 0px;
+    color: #fff;
+    margin-left: 14%;
+    padding: 10px 20px;
+    background-color: #1aa3ff;
+}
+
+.parent button:hover{
+    background-color: #008ae6;
+}
