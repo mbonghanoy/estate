@@ -19,14 +19,19 @@ class LoginController
     {
         if(isset($_POST['login'])){
             $check = new Contact;
+            $hashed = htmlentities($_POST['password'], ENT_QUOTES);
             $checker = $check
                 ->table('admin')
                 ->where('username', $_POST['username'])
-                ->andWhere('password', $_POST['password'])
                 ->get();
             if(count($checker) == 1){
                 foreach($checker as $checkers){
-                    $_SESSION['id'] = $checkers->admin_id;
+                    $password = $checkers->password;
+                    if(password_verify($hashed, $password)){
+                        $_SESSION['id'] = $checkers->admin_id;
+                    }else {
+                        echo 'User name or Password incorrect';
+                    }
                 }
             }else {
                 echo 'User name or Password incorrect';

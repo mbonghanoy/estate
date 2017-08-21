@@ -126,7 +126,7 @@ header{
     font-family: 'Roboto';
 }
 
-.parent input[type="text"]{
+.parent input[type="text"], input[type="password"]{
     margin-bottom: 20px;
     padding: 12px 20px;
     margin: 8px 0;

@@ -17,7 +17,7 @@
             </div>
             <div>
                 Password
-                <input type="text" name="password">
+                <input type="password" name="password">
             </div>
             <div>
                 <button type="submit" name="login">Login</button>
