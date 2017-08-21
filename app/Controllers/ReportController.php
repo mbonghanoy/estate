@@ -18,7 +18,7 @@ class ReportController
 
             $checkeout = $contact
                 ->table('asset')
-                ->where('status_id', 1)
+                ->where('status_id', 'Checked out')
                 ->select('count(status_id) as checked');
 
             $total = $totals

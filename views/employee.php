@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reports.css">
+    <link rel="stylesheet" href="css/signup.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
     <script src="https://use.fontawesome.com/215138297b.js"></script>
-    <title>Dashboard</title>
 </head>
 <body>
     <header></header>
@@ -40,30 +39,17 @@
         </nav>
     </div>
     <div class="right-container">
-        <div class="card card-3">
-            <div class="card1">
-                <?php foreach($contacts as $contact): ?>
-                <p><?php echo $contact->num ?></p>
+        <h1>Employees</h1>
+        <form action="" method="POST">
+            <table class="employees">
+                <?php foreach($employees as $employee): ?>
+                <tr>
+                    <td><?php echo "$employee->last_name, $employee->first_name" ?></td>
+                    <td><?php echo $employee->job_position?></td>
+                </tr>
                 <?php endforeach; ?>
-                <p>Total Assets</p>
-            </div>
-        </div>
-        <div class="card card-3">
-            <div class="card2">
-                <?php foreach($checkeout as $checkout): ?>
-                <p><?php echo $checkout->checked ?></p>
-                <?php endforeach; ?>
-                <p>Checked out</p>
-            </div>
-        </div>
-        <div class="card card-3">
-            <div class="card3">
-                <?php foreach($total as $sum): ?>
-                <p>&#8369;<?php echo $sum->total ?></p>
-                <?php endforeach; ?>
-                <p>Value of Assets</p>
-            </div>
-        </div>
+            </table>
+        </form>
     </div>
 </body>
 </html>

@@ -12,12 +12,33 @@
     <form action="" method="POST">
         <header></header>
         <div class="left-container">
-            <div class="side-nav">
-                <li><a href="reports">Reports</a></li>
-                <li><a href="items">Assets</a></li>
-                <li><a href="signup">Add Asset</a></li>
-                <li><a href="logout">Logout</a></li>
-            </div>
+            <nav>
+                <li>
+                    <a href="reports">
+                        <i class="fa fa-envelope" aria-hidden="true"></i> Reports
+                    </a>
+                </li>
+                <li>
+                    <a href="items">
+                        <i class="fa fa-list" aria-hidden="true"></i> Assets
+                    </a>
+                </li>
+                <li>
+                    <a href="signup ">
+                        <i class="fa fa-plus-circle" aria-hidden="true"></i> Add Asset
+                    </a>
+                </li>
+                <li>
+                <a href="employee">
+                    <i class="fa fa-users" aria-hidden="true"></i> Employees
+                </a>
+                </li>
+                <li>
+                    <a href="logout">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
+                    </a>
+                </li>
+            </nav>
         </div>
         <div class="right-container">
             <h1>Add an Assets</h1>
@@ -42,7 +63,7 @@
                     Model <input type="text" name="model" required>
                 </div>
                 <div class="cost">
-                    Cost <input type="text" name="cost" required>
+                    Cost &#8369;<input type="text" name="cost" required>
                 </div>
                 <button type="submit" name="insert" class="submit-button">Submit</button>
             </div>

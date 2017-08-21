@@ -8,13 +8,12 @@ body{
     margin: 0 auto;
 }
 
-header{
-    padding: 1%;
-    width: 100%;
-}
-
 li{
     list-style: none;
+}
+
+li:hover{
+    border-right: 3px solid black;
 }
 
 a{
@@ -30,19 +29,20 @@ a{
     position: fixed;
 }
 
-.side-nav{
+nav{
     margin-top: 50%;
 }
 
-.side-nav li{
+nav li{
     width: 100%;
     border-bottom: 1px solid #C0C0C0;
     text-decoration: none;
     padding : 5%;
+    padding-left: 15%;
 }
 
-.side-nav li a{
-    margin-left: 10%;
+nav a{
+    margin-left: 12%;
     color: black;
     font-size: 90%;
 }
@@ -100,7 +100,7 @@ tr {
 
 .asset-action a{
     border-left: 3px solid #0086b3;
-    padding: 5%;
+    padding: 3%;
     font-size: 18px;
     padding-left: 2px;
     color:  #404040;
@@ -113,7 +113,7 @@ tr {
 header{
     width: 100%;
     background-color: #273135;
-    height: 75px;
+    height: 60px;
 }
 
 .asset-action a:hover{

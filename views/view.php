@@ -2,18 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>View asset</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/view.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <script src="https://use.fontawesome.com/215138297b.js"></script>
+    <title>Dashboard</title>
 </head>
 <body>
+    <header></header>
     <div class="left-container">
-        <div class=""><a href="items">Assets</a></div>
-        <div class=""><a href="signup ">Add Asset</a></div>
-        <div class=""><a href="logout">Logout</a></div>
+        <nav>
+            <li>
+                <a href="reports">
+                    <i class="fa fa-envelope" aria-hidden="true"></i> Reports
+                </a>
+            </li>
+            <li>
+                <a href="items">
+                    <i class="fa fa-list" aria-hidden="true"></i> Assets
+                </a>
+            </li>
+            <li>
+                <a href="signup ">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i> Add Asset
+                </a>
+            </li>
+            <li>
+                <a href="employee">
+                    <i class="fa fa-users" aria-hidden="true"></i> Employees
+                </a>
+            </li>
+            <li>
+                <a href="logout">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
+                </a>
+            </li>
+        </nav>
     </div>
     <div class="right-container">
+        <h1>Asset view</h1>
         <?php foreach($contacts as $contact): ?>
-        <h1><?php echo $contact->description ?></h1>
-        <table>
+        <h3><?php echo $contact->description ?></h3>
+        <div class="action">
+            <li>
+                <a href="edit?id=<?php echo $contact->asset_id ?>">edit asset</a>
+            </li>
+            <li>
+                <a href="checkout?id=<?php echo $contact->asset_id ?>">checkout</a>
+            </li>
+            <li>
+                <a href="checkin?id=<?php echo $contact->asset_id ?>">checkin</a>
+            </li>
+            <li>
+                <a href="delete?id=<?php echo $contact->asset_id ?>">delete asset</a>
+            </li>
+        </div>
+        <table class="asset-view">
             <tr>
                 <td>Asset Tag ID</td>
                 <td><?php echo $contact->asset_tag_id ?></td>
@@ -39,11 +83,15 @@
                 <td><?php echo $contact->asset_serial ?></td>
             </tr>
             <tr>
-                <td class="asset-action">
-                    <a href="edit?id=<?php echo $contact->asset_id ?>">edit</a>
-                    <a href="checkout?id=<?php echo $contact->asset_id ?>">checkout</a>
-                    <a href="checkin?id=<?php echo $contact->asset_id ?>">checkin</a>
-                    <a href="delete?id=<?php echo $contact->asset_id ?>">delete asset</a>
+                <td>Status</td>
+                <td>
+                    <span style="<?php if($contact->status_id == 'Available'){
+                        echo 'color:#008000';
+                        }else{
+                            echo 'color:#1aa3ff';
+                        }?>">
+                        <?php echo $contact->status_id ?>
+                    </span>
                 </td>
             </tr>
         </table>

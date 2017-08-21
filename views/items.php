@@ -11,12 +11,33 @@
 <body>
     <header></header>
     <div class="left-container">
-        <div class="side-nav">
-            <div><li><a href="reports">Reports</a></li></div>
-            <div class=""><li><a href="items">Assets</a></li></div>
-            <div class=""><li><a href="signup ">Add Asset</a></li></div>
-            <div class=""><li><a href="logout">Logout</a></li></div>
-        </div>
+        <nav>
+            <li>
+                <a href="reports">
+                    <i class="fa fa-envelope" aria-hidden="true"></i> Reports
+                </a>
+            </li>
+            <li>
+                <a href="items">
+                    <i class="fa fa-list" aria-hidden="true"></i> Assets
+                </a>
+            </li>
+            <li>
+                <a href="signup ">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i> Add Asset
+                </a>
+            </li>
+            <li>
+                <a href="employee">
+                    <i class="fa fa-users" aria-hidden="true"></i> Employees
+                </a>
+            </li>
+            <li>
+                <a href="logout">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
+                </a>
+            </li>
+        </nav>
     </div>
     <div class="right-container">
         <h1>Assets</h1>
@@ -38,12 +59,12 @@
                 <td><?php echo $contact->purchase_date ?></td>
                 <td>&#8369;<?php echo $contact->cost ?></td>
                 <td class="status">
-                    <span style="<?php if($contact->status_id == '2'){
+                    <span style="<?php if($contact->status_id == 'Available'){
                         echo 'color:#008000';
                         }else{
                             echo 'color:#1aa3ff';
                         }?>">
-                        <?php echo $contact->status_name ?>
+                        <?php echo $contact->status_id ?>
                     </span>
                 </td>
                 <td class="asset-action">

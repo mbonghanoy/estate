@@ -8,11 +8,6 @@ body{
     margin: 0 auto;
 }
 
-header{
-    padding: 1%;
-    width: 100%;
-}
-
 li{
     list-style: none;
 }
@@ -30,19 +25,20 @@ a{
     position: fixed;
 }
 
-.side-nav{
+nav{
     margin-top: 50%;
 }
 
-.side-nav li{
+nav li{
     width: 100%;
     border-bottom: 1px solid #C0C0C0;
     text-decoration: none;
     padding : 5%;
+    padding-left: 15%;
 }
 
-.side-nav li a{
-    margin-left: 10%;
+nav a{
+    margin-left: 12%;
     color: black;
     font-size: 90%;
 }
@@ -69,7 +65,7 @@ a{
 header{
     width: 100%;
     background-color: #273135;
-    height: 75px;
+    height: 60px;
 }
 
 .sign-up-form{
@@ -86,6 +82,11 @@ header{
 .sign-up-form input[type=text], .sign-up-form input[type="date"]{
     width: 200px;
     height: 30px;
+    opacity: .5;
+}
+
+.sign-up-form input[type=text]:hover, .sign-up-from input[type="date"]:hover{
+    opacity: 1;
 }
 
 .description input[type="text"]{
@@ -128,4 +129,77 @@ header{
 
 .submit-button:hover{
     color:black;
+}
+
+.asset-checkout {
+    width: 50%;
+    margin-left: 20%;
+}
+
+.asset-checkout tr{
+    height: 30px;
+}
+
+.option-button{
+    margin-left: 55%;
+}
+
+.option-button button{
+    border-radius: 13px;
+    padding: 7px;
+    background-color: #1a8cff;
+    color: white;
+}
+
+.option-button button{
+    .box-sizing(content-box);
+    cursor: pointer;
+    margin: 0 auto;
+    border: 2px solid #2196F3;
+    -webkit-border-radius: 40px;
+    border-radius: 40px;
+    color: #FFFFFF;
+    text-align: center;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    letter-spacing: 1px;
+    background: #2196F3;
+    .transition(background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0));
+}
+
+
+.option-button button:hover {
+    background-color: #0b7dda;
+}
+
+.option-button select{
+    padding: 5px;
+    .box-sizing(content-box);
+    cursor: pointer;
+    margin: 0 auto;
+    border: 2px solid #2196F3;;
+    -webkit-border-radius: 40px;
+    border-radius: 40px;
+    color: #2196F3;;
+    text-align: center;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    letter-spacing: 1px;
+    background: rgba(0,0,0,0);
+    .transition(background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0));
+}
+
+.option-button select option{
+    backgroun-color: #000000;
+}
+
+.employees{
+    border-collapse: collapse;
+    margin-left: 20px;
+}
+
+.employees td{
+    padding: 1%;
+    border: 1px solid black;
+    width: 300px;
 }

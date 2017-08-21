@@ -9,8 +9,9 @@ body{
 }
 
 header{
-    padding: 1%;
     width: 100%;
+    background-color: #273135;
+    height: 60px;
 }
 
 li{
@@ -39,10 +40,11 @@ a{
     border-bottom: 1px solid #C0C0C0;
     text-decoration: none;
     padding : 5%;
+    padding-left: 15%;
 }
 
-.side-nav li a{
-    margin-left: 10%;
+.side-nav a{
+    margin-left: 12%;
     color: black;
     font-size: 90%;
 }

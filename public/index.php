@@ -21,6 +21,7 @@ $router->get("checkout?id={$_GET['id']}", 'CheckoutController::display');
 $router->get("checkin?id={$_GET['id']}", 'CheckoutController::checkIn');
 $router->get("delete?id={$_GET['id']}", 'CheckoutController::erase');
 $router->get('reports', 'ReportController::get');
+$router->get('employee', 'EmployeeController::get');
 
 $router->post('SignupController::insertion');
 $router->post('LoginController::checkAccount');
