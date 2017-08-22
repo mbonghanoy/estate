@@ -28,6 +28,7 @@ class SignupController
                 'asset_tag_id' => htmlentities($_POST['asset_tag_id'], ENT_QUOTES),
                 'purchase_date' => htmlentities($_POST['purchase_date'], ENT_QUOTES),
                 'model' => htmlentities($_POST['model'], ENT_QUOTES),
+                'life_span' => htmlentities($_POST['life_span'], ENT_QUOTES),
                 'cost' => htmlentities($_POST['cost'], ENT_QUOTES)
             ];
             $insertion = $insert->table('asset')

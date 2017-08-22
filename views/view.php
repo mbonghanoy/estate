@@ -82,6 +82,12 @@
                 <td>Serial No</td>
                 <td><?php echo $contact->asset_serial ?></td>
             </tr>
+            <?php foreach($lifeDeath as $life): ?>
+            <tr>
+                <td>Life span</td>
+                <td><?php echo "$life->DATE ($contact->life_span months)"?></td>
+            </tr>
+            <?php endforeach; ?>
             <tr>
                 <td>Status</td>
                 <td>

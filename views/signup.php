@@ -65,6 +65,9 @@
                 <div class="cost">
                     Cost &#8369;<input type="text" name="cost" required>
                 </div>
+                <div>
+                    Lifespan(months) <input type="text" name="life_span">
+                </div>
                 <button type="submit" name="insert" class="submit-button">Submit</button>
             </div>
         </div>

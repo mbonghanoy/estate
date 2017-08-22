@@ -10,14 +10,25 @@ class ViewController
     {
         if(isset($_SESSION['id'])){
             $contact = new Contact;
+            $life = new Contact;
 
             $contacts = $contact
                 ->table('asset')
                 ->where('asset_id', $_GET['id'])
                 ->get();
 
+            foreach($contacts as $contact){
+                $lifeSpan = $contact->life_span;
+
+                $lifeDeath = $life
+                    ->table('asset')
+                    ->where('asset_id', $_GET['id'])
+                    ->select("DATE_ADD(purchase_date, INTERVAL '$lifeSpan' MONTH) as DATE");
+            }
+
             return view('view', [
-                    'contacts' => $contacts
+                    'contacts' => $contacts,
+                    'lifeDeath' => $lifeDeath
             ]);
         }else{
             header('Location: login');
@@ -53,7 +64,8 @@ class ViewController
                 'asset_tag_id' => htmlentities($_POST['asset_tag_id'], ENT_QUOTES),
                 'purchase_date' => htmlentities($_POST['purchase_date'], ENT_QUOTES),
                 'model' => htmlentities($_POST['model'], ENT_QUOTES),
-                'cost' => htmlentities($_POST['cost'], ENT_QUOTES)
+                'cost' => htmlentities($_POST['cost'], ENT_QUOTES),
+                'life_span' => htmlentities($_POST['life_span'], ENT_QUOTES)
             ];
 
             $update

@@ -64,6 +64,9 @@
                 <div class="model">
                     Model <input type="text" name="model" value="<?php echo $contact->model ?>">
                 </div>
+                <div class="life-span">
+                    Life span <input type="text" name="life_span" value="<?php echo $contact->life_span ?>">
+                </div>
                 <div class="cost">
                     Cost &#8369;<input type="text" name="cost" value="<?php echo $contact->cost ?>">
                 </div>
