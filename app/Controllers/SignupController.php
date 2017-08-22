@@ -11,9 +11,7 @@ class SignupController
     public function signup()
     {
         if(isset($_SESSION['id'])){
-            return view('signup', [
-                'contacts' => $contacts
-            ]);
+            return view('signup');
         }else {
             header('Location: login');
         }

@@ -67,16 +67,20 @@
         <div class="checkout-table">
             <table>
                 <tr class="title">
-                    <td colspan="2">Checkout</td>
+                    <td colspan="3">Checkout</td>
                 </tr>
                 <tr class="mini-title">
                     <td>Name</td>
                     <td>Item Description</td>
+                    <td>Action</td>
                 </tr>
                 <?php foreach($viewCheckedout as $viewCheckout): ?>
                 <tr>
                     <td><?php echo $viewCheckout->first_name ?></td>
                     <td><?php echo $viewCheckout->description ?></td>
+                    <td>
+                        <a href="view?id=<?php echo $viewCheckout->asset_id ?>">view</a>
+                    </td>
                 </tr>
                 <?php endforeach; ?>
             </table>
