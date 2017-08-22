@@ -11,6 +11,7 @@ class ViewController
         if(isset($_SESSION['id'])){
             $contact = new Contact;
             $life = new Contact;
+            $depreciation = new Contact;
 
             $contacts = $contact
                 ->table('asset')
@@ -24,11 +25,24 @@ class ViewController
                     ->table('asset')
                     ->where('asset_id', $_GET['id'])
                     ->select("DATE_ADD(purchase_date, INTERVAL '$lifeSpan' MONTH) as DATE");
+                $dateNow = date('Y-m-d');
+                $depreciationMonth  = $depreciation
+                    ->table('asset')
+                    ->where('asset_id', $_GET['id'])
+                    ->select("TIMESTAMPDIFF(MONTH, purchase_date, '$dateNow') as depreciation_month");
+                foreach($depreciationMonth as $depreciatedMonth){
+                    if($depreciatedMonth->depreciation_month >= 1){
+                        $total = $depreciatedMonth->depreciation_month * $contact->depreciation_rate*$contact->cost;
+
+                        $totalDepreciated = $contact->cost - $total;
+                    }
+                }
             }
 
             return view('view', [
                     'contacts' => $contacts,
-                    'lifeDeath' => $lifeDeath
+                    'lifeDeath' => $lifeDeath,
+                    'totalDepreciated' =>$totalDepreciated
             ]);
         }else{
             header('Location: login');
@@ -65,7 +79,8 @@ class ViewController
                 'purchase_date' => htmlentities($_POST['purchase_date'], ENT_QUOTES),
                 'model' => htmlentities($_POST['model'], ENT_QUOTES),
                 'cost' => htmlentities($_POST['cost'], ENT_QUOTES),
-                'life_span' => htmlentities($_POST['life_span'], ENT_QUOTES)
+                'life_span' => htmlentities($_POST['life_span'], ENT_QUOTES),
+                'depreciation_rate' => htmlentities($_POST['depreciation_rate'], ENT_QUOTES)
             ];
 
             $update

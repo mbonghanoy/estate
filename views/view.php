@@ -87,6 +87,14 @@
                 <td>Life span</td>
                 <td><?php echo "$life->DATE ($contact->life_span months)"?></td>
             </tr>
+            <tr>
+                <td>Depreciation rate(per month)</td>
+                <td><?php echo $contact->depreciation_rate*100 ?>%</td>
+            </tr>
+            <tr>
+                <td>Depreciated Cost</td>
+                <td><?php echo $totalDepreciated ?></td>
+            </tr>
             <?php endforeach; ?>
             <tr>
                 <td>Status</td>

@@ -70,6 +70,11 @@
                 <div class="cost">
                     Cost &#8369;<input type="text" name="cost" value="<?php echo $contact->cost ?>">
                 </div>
+                <div>
+                    Depreciation rate
+                    <input type="radio" name="depreciation_rate" value=".05">5%
+                    <input type="radio" name="depreciation_rate" value="0">none
+                </div>
                 <button type="submit" name="update" class="submit-button">Submit</button>
                 <?php endforeach; ?>
             </div>

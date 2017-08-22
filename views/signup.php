@@ -68,6 +68,11 @@
                 <div>
                     Lifespan(months) <input type="text" name="life_span">
                 </div>
+                <div>
+                    Depreciated rate(per month)
+                    <input type="radio" name="depreciation_rate" value=".05">5%
+                    <input type="radio" name="depreciation_rate" value="0">none
+                </div>
                 <button type="submit" name="insert" class="submit-button">Submit</button>
             </div>
         </div>
