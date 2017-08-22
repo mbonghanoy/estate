@@ -41,7 +41,7 @@
             </nav>
         </div>
         <div class="right-container">
-            <h1>Add an Assets</h1>
+            <h1>Add an Asset</h1>
             <h3>Asset Details</h3>
             <div class="sign-up-form">
                 <div class="description">

@@ -17,7 +17,7 @@ class LoginController
 
     public function checkAccount()
     {
-        if(isset($_POST['login'])){
+        if(isset($_POST['login'])) {
             $check = new Contact;
             $hashed = htmlentities($_POST['password'], ENT_QUOTES);
             $checker = $check
@@ -27,14 +27,14 @@ class LoginController
             if(count($checker) == 1){
                 foreach($checker as $checkers){
                     $password = $checkers->password;
-                    if(password_verify($hashed, $password)){
+                    if(password_verify($hashed, $password)) {
                         $_SESSION['id'] = $checkers->admin_id;
                     }else {
-                        echo 'User name or Password incorrect';
+                        echo "<script>alert('Username or Password incorrrect')</script>";
                     }
                 }
             }else {
-                echo 'User name or Password incorrect';
+                echo "<script>alert('Username or Password incorrrect')</script>";
             }
         }
     }

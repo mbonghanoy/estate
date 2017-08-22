@@ -34,9 +34,9 @@ class EmployeeController
         if(isset($_POST['save'])){
             $addEmployee = new Contact;
             $data = [
-                'first_name' => $_POST['first_name'],
-                'last_name' => $_POST['last_name'],
-                'job_position' => $_POST['position']
+                'first_name' => htmlentities($_POST['first_name'], ENT_QUOTES),
+                'last_name' => htmlentities($_POST['last_name'], ENT_QUOTES),
+                'job_position' => htmlentities($_POST['position'], ENT_QUOTES)
             ];
 
             $insertion = $addEmployee->table('employee')

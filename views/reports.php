@@ -72,13 +72,14 @@
                 <tr class="mini-title">
                     <td>Name</td>
                     <td>Item Description</td>
-                    <td>Action</td>
+                    <td>Checkout date</td>
                 </tr>
                 <?php foreach($viewCheckedout as $viewCheckout): ?>
                 <tr>
                     <td><?php echo $viewCheckout->first_name ?></td>
                     <td><?php echo $viewCheckout->description ?></td>
                     <td>
+                        <?php echo $viewCheckout->checkout_date ?>
                         <a href="view?id=<?php echo $viewCheckout->asset_id ?>">view</a>
                     </td>
                 </tr>

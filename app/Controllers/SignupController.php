@@ -22,13 +22,13 @@ class SignupController
         if(isset($_POST['insert'])){
             $insert = new Contact;
             $data = [
-                'description' => $_POST['description'],
-                'asset_serial' => $_POST['asset_serial'],
-                'brand' => $_POST['brand'],
-                'asset_tag_id' => $_POST['asset_tag_id'],
-                'purchase_date' => $_POST['purchase_date'],
-                'model' => $_POST['model'],
-                'cost' => $_POST['cost']
+                'description' => htmlentities($_POST['description'], ENT_QUOTES),
+                'asset_serial' => htmlentities($_POST['asset_serial'], ENT_QUOTES),
+                'brand' => htmlentities($_POST['brand'], ENT_QUOTES),
+                'asset_tag_id' => htmlentities($_POST['asset_tag_id'], ENT_QUOTES),
+                'purchase_date' => htmlentities($_POST['purchase_date'], ENT_QUOTES),
+                'model' => htmlentities($_POST['model'], ENT_QUOTES),
+                'cost' => htmlentities($_POST['cost'], ENT_QUOTES)
             ];
             $insertion = $insert->table('asset')
                 ->insert($data);

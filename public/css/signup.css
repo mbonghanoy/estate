@@ -22,7 +22,6 @@ a{
     border-right: 1px solid #C0C0C0;
     height: 1000px;
     font-family: 'Roboto';
-    position: fixed;
 }
 
 nav{
@@ -79,13 +78,13 @@ header{
 }
 
 
-.sign-up-form input[type=text], .sign-up-form input[type="date"]{
+.sign-up-form input[type=text], input[type="date"]{
     width: 200px;
     height: 30px;
     opacity: .5;
 }
 
-.sign-up-form input[type=text]:hover, .sign-up-from input[type="date"]:hover{
+.sign-up-form input[type=text]:hover, input[type="date"]:hover{
     opacity: 1;
 }
 

@@ -36,7 +36,8 @@ class CheckoutController
 
             $data = [
                 'employee_id' => $_POST['employees'],
-                'status_id' => 'Checked out'
+                'status_id' => 'Checked out',
+                'checkout_date' => $_POST['checkout_date']
             ];
             $try = $checkout
                 ->table('asset')
@@ -51,7 +52,8 @@ class CheckoutController
 
         $data = [
             'employee_id' => NULL,
-            'status_id' => 'Available'
+            'status_id' => 'Available',
+            'checkout_date' => NULL
         ];
         $checkin
             ->table('asset')
