@@ -10,7 +10,12 @@ class SignupController
 
     public function signup()
     {
-        if(isset($_SESSION['id'])){
+        /**
+         * checks if the session id is set
+         * if true, will view signup page
+         * else, will directed to login page
+         */
+        if(isset($_SESSION['id'])) {
             return view('signup');
         }else {
             header('Location: login');
@@ -19,8 +24,11 @@ class SignupController
 
     public function insertion()
     {
-        if(isset($_POST['insert'])){
+
+        if(isset($_POST['insert'])) {
+
             $insert = new Contact;
+
             $data = [
                 'description' => htmlentities($_POST['description'], ENT_QUOTES),
                 'asset_serial' => htmlentities($_POST['asset_serial'], ENT_QUOTES),
@@ -32,9 +40,11 @@ class SignupController
                 'life_span' => htmlentities($_POST['life_span'], ENT_QUOTES),
                 'depreciation_rate' => htmlentities($_POST['depreciation_rate'], ENT_QUOTES)
             ];
+
             $insertion = $insert->table('asset')
                 ->insert($data);
-            if($insertion){
+
+            if($insertion) {
                 header('Location: items');
             }
         }

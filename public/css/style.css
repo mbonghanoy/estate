@@ -3,6 +3,7 @@
     -webkit-box-sizing: border-box;
      box-sizing: border-box;
 }
+
 body{
     width: 100%;
     margin: 0 auto;
@@ -28,10 +29,6 @@ a{
     border-right: 1px solid #C0C0C0;
     height: 1000px;
     font-family: 'Roboto';
-}
-
-.side-nav{
-    margin-top: 50%;
 }
 
 .side-nav li{
@@ -79,10 +76,6 @@ a i{
     height: 30px;
     color: #9d662f;
     font-family: 'Roboto';
-}
-
-.right-container{
-    padding: 5%;
 }
 
 tr {

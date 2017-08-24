@@ -3,6 +3,7 @@
     -webkit-box-sizing: border-box;
      box-sizing: border-box;
 }
+
 body{
     width: 100%;
     margin: 0 auto;
@@ -16,6 +17,10 @@ header{
 
 li{
     list-style: none;
+}
+
+li:hover{
+    border-right: 3px solid #ad4747;
 }
 
 a{
@@ -34,10 +39,6 @@ a i{
     font-family: 'Roboto';
 }
 
-nav{
-    margin-top: 50%;
-}
-
 nav li{
     width: 100%;
     border-bottom: 1px solid #C0C0C0;
@@ -53,7 +54,7 @@ nav a{
 }
 
 .right-container{
-    padding: 2%;
+    padding: 1% 2%;
     width: 87%;
     float: right;
 }
@@ -82,11 +83,6 @@ nav a{
     font-family: 'Roboto';
     font-weight: bold;
 }
-
-.right-container{
-    padding: 5%;
-}
-
 .asset-table a{
     text-decoration: none;
     font-weight: 200;
@@ -126,7 +122,7 @@ nav a{
 }
 
 .card.card-3{
-    width: 247px;
+    width: 266.5px;
     font-weight: lighter;
 }
 

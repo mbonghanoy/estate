@@ -3,6 +3,7 @@
     -webkit-box-sizing: border-box;
      box-sizing: border-box;
 }
+
 body{
     width: 100%;
     margin: 0 auto;
@@ -17,7 +18,7 @@ li{
 }
 
 li:hover{
-    border-right: 3px solid black;
+    border-right: 3px solid #ad4747;
 }
 
 a{
@@ -30,10 +31,6 @@ a{
     border-right: 1px solid #C0C0C0;
     height: 1000px;
     font-family: 'Roboto';
-}
-
-nav{
-    margin-top: 50%;
 }
 
 nav li{
@@ -51,7 +48,7 @@ nav a{
 }
 
 .right-container{
-    padding: 2%;
+    padding: 0 2%;
     width: 87%;
     float: right;
 }
@@ -79,10 +76,6 @@ nav a{
     color: #9d662f;
     font-family: 'Roboto';
     font-weight: bold;
-}
-
-.right-container{
-    padding: 5%;
 }
 
 tr {

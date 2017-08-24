@@ -16,7 +16,7 @@ class CheckoutController
          * checks whether the session id is set by
          * logging in the admin
          */
-        if(isset($_SESSION['id'])){
+        if(isset($_SESSION['id'])) {
             $contact = new Contact;
             $employee = new Contact;
 
@@ -33,17 +33,20 @@ class CheckoutController
                 'contacts' => $contacts,
                 'employees' => $employees
             ]);
-        }else{
+
+        }else {
             header('Location: login');
         }
     }
 
     /**
      * assign asset to especific user
+     * filled employee_id from asset table and checkout_date
+     * filling employee_id and checkout_date will make the status = Checked out
      */
     public function checkout()
     {
-        if(isset($_POST['checkout'])){
+        if(isset($_POST['checkout'])) {
             $checkout = new Contact;
 
             $data = [
@@ -59,7 +62,11 @@ class CheckoutController
             header("Location: view?id={$_GET['id']}");
         }
     }
-
+    /**
+     * --checkin an asset depending on id selected
+     * --updating a row and make the employee_id null and checkout_date=null
+     * null employee_id and checkout_date will make status = available
+     */
     public function checkIn()
     {
         $checkin = new Contact;
@@ -69,12 +76,16 @@ class CheckoutController
             'status_id' => 'Available',
             'checkout_date' => NULL
         ];
+
         $checkin
             ->table('asset')
             ->update($data, $_GET['id']);
+
         header('Location: items');
     }
-
+    /**
+     * delete row depending on asset_id
+     */
     public function erase()
     {
         $erase = new Contact;
@@ -83,6 +94,7 @@ class CheckoutController
             ->table('asset')
             ->where('asset_id', $_GET['id'])
             ->delete();
+
         header('Location: items');
     }
 }

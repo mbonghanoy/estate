@@ -8,16 +8,23 @@ class ItemController
 {
     public function get()
     {
-        if(isset($_SESSION['id'])){
+        /**
+         * check if the session id already set
+         * if true, will run the query,
+         * else, will be directed to login page
+         */
+        if(isset($_SESSION['id'])) {
             $contact = new Contact;
 
             $contacts = $contact
                 ->table('asset')
                 ->get();
+
             return view('items', [
                 'contacts' => $contacts
             ]);
-        }else{
+
+        }else {
             header('Location: login');
         }
     }
