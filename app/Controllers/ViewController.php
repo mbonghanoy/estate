@@ -86,7 +86,7 @@ class ViewController
             $update
                 ->table('asset')
                 ->update($data, $_GET['id']);
-            header('Location: items');
+            header("Location: view?id={$_GET['id']}");
         }
     }
 }

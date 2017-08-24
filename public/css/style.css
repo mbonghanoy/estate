@@ -48,6 +48,10 @@ a{
     font-size: 90%;
 }
 
+a i{
+    color: #ad4747;
+}
+
 .right-container{
     padding: 2%;
     width: 87%;

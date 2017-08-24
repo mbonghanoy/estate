@@ -8,6 +8,10 @@ body{
     margin: 0 auto;
 }
 
+a i{
+    color: #ad4747;
+}
+
 li{
     list-style: none;
 }

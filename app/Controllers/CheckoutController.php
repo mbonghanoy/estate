@@ -6,8 +6,16 @@ use Estate\Models\Contact;
 
 class CheckoutController
 {
+    /**
+     * [display description]
+     * @return [type] [description]
+     */
     public function display()
     {
+        /**
+         * checks whether the session id is set by
+         * logging in the admin
+         */
         if(isset($_SESSION['id'])){
             $contact = new Contact;
             $employee = new Contact;
@@ -20,6 +28,7 @@ class CheckoutController
             $employees = $employee
                 ->table('employee')
                 ->all();
+
             return view('checkout', [
                 'contacts' => $contacts,
                 'employees' => $employees
@@ -29,6 +38,9 @@ class CheckoutController
         }
     }
 
+    /**
+     * assign asset to especific user
+     */
     public function checkout()
     {
         if(isset($_POST['checkout'])){
@@ -39,10 +51,12 @@ class CheckoutController
                 'status_id' => 'Checked out',
                 'checkout_date' => $_POST['checkout_date']
             ];
+
             $try = $checkout
                 ->table('asset')
                 ->update($data, $_GET['id']);
-            header('Location: items');
+
+            header("Location: view?id={$_GET['id']}");
         }
     }
 

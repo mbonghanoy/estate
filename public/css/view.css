@@ -22,6 +22,10 @@ a{
     text-decoration: none;
 }
 
+a i{
+    color: #ad4747;
+}
+
 .left-container{
     width: 13%;
     float: left;

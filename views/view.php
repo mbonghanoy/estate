@@ -68,7 +68,7 @@
             </tr>
             <tr>
                 <td>Cost</td>
-                <td><?php echo $contact->cost ?></td>
+                <td>&#8369;<?php echo $contact->cost ?></td>
             </tr>
             <tr>
                 <td>Brand</td>
@@ -92,8 +92,8 @@
                 <td><?php echo $contact->depreciation_rate*100 ?>%</td>
             </tr>
             <tr>
-                <td>Depreciated Cost</td>
-                <td><?php echo $totalDepreciated ?></td>
+                <td>Total Depreciated Cost</td>
+                <td>&#8369;<?php echo $totalDepreciated ?></td>
             </tr>
             <?php endforeach; ?>
             <tr>

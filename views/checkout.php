@@ -47,7 +47,7 @@
                     <option value="<?php echo $employee->employee_id ?>"><?php echo $employee->first_name?></option>
                     <?php endforeach; ?>
                 </select>
-                <input type="date" name="checkout_date">
+                <input type="date" name="checkout_date" required>
                 <button type="submit" name="checkout">Checkout</button>
             </div>
             <?php foreach($contacts as $contact): ?>
